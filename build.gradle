@@ -15,17 +15,6 @@ group = 'vxstream'
 version = '1.0.0'
 sourceCompatibility = '11'
 
-//subprojects {
-//    version = '1.0'
-//}
-
-
-//allprojects {
-//    repositories {
-//        mavenCentral()
-//    }
-
-//}
 repositories {
     mavenCentral()
 }
@@ -35,14 +24,14 @@ bootJar {
 }
 
 dependencies {
-    implementation 'io.grpc:grpc-netty-shaded:1.27.2'
-    implementation "io.grpc:grpc-protobuf:1.27.2"
-    implementation "io.grpc:grpc-stub:1.27.2"
+    implementation 'io.grpc:grpc-netty-shaded:1.29.0'
+    implementation "io.grpc:grpc-protobuf:1.29.0"
+    implementation "io.grpc:grpc-stub:1.29.0"
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
 
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    compile 'net.devh:grpc-client-spring-boot-starter:2.7.0.RELEASE'
+    compile 'net.devh:grpc-client-spring-boot-starter:2.8.0.RELEASE'
 }
 
 protobuf {
@@ -55,7 +44,7 @@ protobuf {
     }
     plugins {
         grpc {
-            artifact = "io.grpc:protoc-gen-grpc-java:1.27.2"
+            artifact = "io.grpc:protoc-gen-grpc-java:1.29.0"
         }
     }
     generateProtoTasks {
